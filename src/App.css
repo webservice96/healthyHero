@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+.section-padding {
+  margin-bottom: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.health-btn-dark {
+  background-color: #040447 !important;
+  border-radius: 50px 50px 50px 50px !important;
+  padding: 20px 40px 20px 40px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .section-padding {
+    margin-bottom: 50px !important;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .banner-text {
+    padding: 15px !important;
   }
-  to {
-    transform: rotate(360deg);
+  .banner-text h1 {
+    font-size: 28px !important;
+    line-height: unset !important;
+  }
+  .how-we-work-right img:nth-child(1) {
+    width: 95% !important;
   }
 }
