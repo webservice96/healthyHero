@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with Healthy Hero App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+<ul>    
+    <li>Html</li>
+    <li>Css</li>
+    <li>React</li>
+    <li>Firebase</li>
+    <li>Bootstrap</li>
+    <li>Etc...</li>
+</ul>
 
 ### `yarn start`
 
