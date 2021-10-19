@@ -1,6 +1,6 @@
 # Getting Started with Healthy Hero App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Healthy Hero [Live link](https://healthy-hero-a4215.web.app/).
 
 ## Available Scripts
 

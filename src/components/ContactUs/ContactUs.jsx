@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const ContactUs = () => {
     return (
         <Container className="py-5">
-            this is Contact
+            <h2>This is Contact</h2>
         </Container>
     );
 };

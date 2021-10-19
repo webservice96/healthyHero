@@ -20,8 +20,8 @@ const Header = () => {
                             <Nav.Link as={Link} to="/doctorapply">Apply as a doctor</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/contatus">Contact Us</Nav.Link>
-                            {user?.email ?
+                            <Nav.Link as={Link} to="/contactus">Contact Us</Nav.Link>
+                            {user?.displayName ?
                                 <div className="d-flex align-items-center">
                                     Welcome, {user.displayName}
                                     <Nav.Link as={Link} to="/" onClick={logOut} className="ms-2">Logout</Nav.Link>

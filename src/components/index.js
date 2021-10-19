@@ -1,6 +1,7 @@
 export { default as Header } from './Header/Header';
 export { default as Hero } from './Hero/Hero';
 export { default as Services } from './Services/Services';
+export { default as ServicePage } from './ServicePage/ServicePage';
 export { default as SingleService } from './Services/SingleService/SingleService';
 export { default as Login } from './Login/Login';
 export { default as Signup } from './Signup/Signup';

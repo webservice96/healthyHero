@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 const Login = () => {
-    const { signWithGoogle, user, signInUsingEmailAndPassword } = useAuth();
+    const { signWithGoogle, user, signInUsingEmailAndPassword, signWithGithub } = useAuth();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         signInUsingEmailAndPassword(data.email, data.password);
@@ -18,7 +18,7 @@ const Login = () => {
     const history = useHistory();
     const redirect_uri = location.state?.from || '/';
 
-    if (user.email) {
+    if (user.displayName) {
         history.push(redirect_uri);
     }
 
@@ -51,7 +51,7 @@ const Login = () => {
                     </form>
                     <ButtonGroup className="mb-2">
                         <Button onClick={signWithGoogle} variant="info">Login with google</Button>
-                        <Button variant="dark">Login with github</Button>
+                        <Button onClick={signWithGithub} variant="dark">Login with github</Button>
                     </ButtonGroup>
 
                     <Link to="/signup" className="text-end">You don't have account yet?</Link>

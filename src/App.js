@@ -1,5 +1,5 @@
 import './App.css';
-import { ApplyAsDoctor, BookAppointment, ContactUs, Footer, Header, Login, Page404, Signup, SingleService } from './components';
+import { ApplyAsDoctor, BookAppointment, ContactUs, Footer, Header, Login, Page404, ServicePage, Signup, SingleService } from './components';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -28,6 +28,9 @@ function App() {
 						<PrivateRoute path="/doctorapply">
 							<ApplyAsDoctor />
 						</PrivateRoute>
+						<Route path="/services">
+							<ServicePage />
+						</Route>
 						<PrivateRoute path="/service/topic/:topicId">
 							<SingleService />
 						</PrivateRoute>
@@ -37,7 +40,7 @@ function App() {
 						<Route path="/signup">
 							<Signup />
 						</Route>
-						<Route path="/contatus">
+						<Route path="/contactus">
 							<ContactUs />
 						</Route>
 						<Route path="*">

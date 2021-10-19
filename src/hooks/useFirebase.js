@@ -7,6 +7,7 @@ import {
     onAuthStateChanged,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
+    GithubAuthProvider,
     signOut
 }
     from "firebase/auth";
@@ -18,6 +19,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     /* create user manually */
     const createUseruSignEmailAndPassword = (email, password) => {
@@ -65,7 +67,32 @@ const useFirebase = () => {
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'ok'
                     });
+                } else if ('auth/wrong-password' === errorCode) {
+                    Swal.fire({
+                        title: 'Password mismatch!',
+                        text: "Please put a valid password",
+                        icon: 'warning',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'ok'
+                    });
                 }
+            });
+    }
+
+    /* sign with github */
+    const signWithGithub = () => {
+        signInWithPopup(auth, githubProvider)
+            .then((result) => {
+                // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+                const credential = GithubAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+
+                // The signed-in user info.
+                const user = result.user;
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
             });
     }
 
@@ -107,6 +134,7 @@ const useFirebase = () => {
         signInUsingEmailAndPassword,
         user,
         signWithGoogle,
+        signWithGithub,
         logOut
     }
 }
